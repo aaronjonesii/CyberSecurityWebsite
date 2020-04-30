@@ -1,0 +1,14 @@
+<div class="container-fluid row" id="">
+    <div class="d-flex col justify-content-start align-items-center">
+        <a class="text-decoration-none" routerLink="/"> <h5 class=""> Anonymous Systems </h5> </a>
+    </div>
+      <div class="d-flex col justify-content-center align-items-center lead"> </div>
+      <div class="d-flex col justify-content-end m-3">
+        <button class="p-2 mr-3" status="primary" nbButton> Subscribe </button>
+        <button class="p-2 mr-3" status="warning" hero nbButton> Contact Us</button>
+        <button class="p-2 mr-3" status="success" (click)="auth.login()" *ngIf="!auth.loggedIn" hero nbButton>Log In</button>
+        <div *ngIf="auth.loggedIn">
+          <nb-user *ngIf="auth.userProfile$ | async as profile" [name]="profile.name" [title]="profile.nickname" [picture]='profile.picture' [nbContextMenu]="context_items"> </nb-user>
+        </div>
+      </div>
+  </div>

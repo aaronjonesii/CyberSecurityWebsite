@@ -1,0 +1,22 @@
+<div class="container" *ngIf="auth.userProfile$ | async as profile">
+
+    <div class="row align-items-center mb-5" *ngIf="profile">
+        <div class="col text-center">
+            <img [src]="profile.picture" class="rounded-circle mb-3 w-25"/>
+        </div>
+        <div class="col">
+            <div class="row">
+                <h4 class="">Full Name: <h2>{{ profile.name }}</h2> </h4>
+            </div>
+            
+            <h4 class="">Email: <p class="lead text-muted">{{ profile.email }}</p> </h4>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="profile">
+        <pre class="">
+            <code [highlight]="profile | json"></code>
+        </pre>
+    </div>
+
+</div>

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsHeroComponent implements OnInit {
   blog = {
+    id: 1,
     date: 'Apr 22',
     readtime: '2',
     title: 'Nebula',

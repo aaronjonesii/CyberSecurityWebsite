@@ -6,7 +6,7 @@
             <nb-card class="card w-100 d-flex border-0">
                 <nb-card-body class="card-body">
                     <img [src]="blog.image" class="card-img" alt="...">
-                    <h5 class="card-title"> <a class="text-decoration-none text-reset stretched-link" routerLink="/blog/post">{{ blog.title }}</a> </h5>
+                    <h5 class="card-title"> <a class="text-decoration-none text-reset stretched-link" routerLink="/blog/post/{{blog.id}}">{{ blog.title }}</a> </h5>
                     <p class="card-text text-muted">{{ blog.subtitle }}</p>
                     <p class="card-text m-0"> <small class="">{{ blog.author }}</small> </p>
                     <p class="card-text m-0"> <small class="text-muted">{{ blog.date }} | {{ blog.readtime }} min read</small> </p>
@@ -19,7 +19,7 @@
                     <img [src]="blog.image2" class="d-flex mr-2 rounded float-left" style="max-width: 100px; max-height: 100px;" alt="..." />
                     <nb-card class="card m-0 border-0">
                         <nb-card-body>
-                            <h6 class="card-title"> <a class="text-decoration-none text-reset stretched-link" routerLink="/blog/post">{{ blog.title }}</a> </h6>
+                            <h6 class="card-title"> <a class="text-decoration-none text-reset stretched-link" routerLink="/blog/post/{{blog.id}}">{{ blog.title }}</a> </h6>
                             <p class="card-text m-0"> <small class="">{{ blog.author }}</small> </p>
                             <p class="card-text m-0"> <small class="text-muted">{{ blog.date }} | {{ blog.readtime }} min read</small> </p>
                         </nb-card-body>
@@ -31,7 +31,7 @@
             <nb-card class="card w-100 d-flex border-0">
                 <nb-card-body class="card-body">
                     <img [src]="blog.image" class="card-img" alt="...">
-                    <h5 class="card-title"> <a class="text-decoration-none text-reset stretched-link" routerLink="/blog/post">{{ blog.title }}</a> </h5>
+                    <h5 class="card-title"> <a class="text-decoration-none text-reset stretched-link" routerLink="/blog/post/{{blog.id}}">{{ blog.title }}</a> </h5>
                     <p class="card-text text-muted">{{ blog.subtitle }}</p>
                     <p class="card-text m-0"> <small class="text-muted">{{ blog.author }}</small> </p>
                     <p class="card-text m-0"> <small class="text-muted">{{ blog.date }} | {{ blog.readtime }} min read</small> </p>

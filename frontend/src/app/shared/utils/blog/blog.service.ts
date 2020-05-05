@@ -18,7 +18,7 @@ export class BlogService {
 
   updateBlogSubject() {
     this.subject.next(BLOGS);
-    console.log('UPDATE Blog Subject was called!');
+    // console.log('UPDATE Blog Subject was called!');
   };
 
   getPost(id: number): Observable<Blog> {

@@ -1,15 +1,24 @@
 <div class="container">
     <a class="row" hero nbButton status="success" routerLink="/blog" target="_self"> Blog </a>
-    <div class="row"> Category Subheader With Related Topics</div>
-    <div class="row display-1 "> {{ post.title}} </div>
-    <div class="row"> Subtitle of Blog Post </div>
-    <div class="row">
-        <div class="col"> <nb-user> Anonymous Author Picture </nb-user> </div>
-        <div class="col">
-            <div class="row"> <p>{{ post.author }}</p> <button outline nbButton> Follow </button> </div>
-            <div class="row"> {{post.date}} | {{post.readtime}} </div>
+    <div class="w-50 mx-auto">
+      <h1 class=""> {{ post.title}} </h1>
+      <div class="row"> <span class="lead"> {{ post.subtitle }} </span> </div>
+      <div class="row">
+          <div class="col p-0">
+            <nb-user class="" [name]="post.author"> </nb-user>
+            <div class="row ml-2 small text-muted"> {{post.date}} | {{post.readtime}} min read </div>
+          </div>
+          <div class="col">
+              <div class="row"> <button shape="semi-round" size="tiny" status="danger" outline nbButton> Follow </button> </div>
+          </div>
+        <div class="row">
+          <div class="col d-flex p-1"> <nb-icon icon="twitter-outline"></nb-icon> </div>
+          <div class="col d-flex p-1"> <nb-icon icon="linkedin-outline"></nb-icon> </div>
+          <div class="col d-flex p-1"> <nb-icon icon="facebook-outline"></nb-icon> </div>
+          <div class="col d-flex p-1"> <nb-icon icon="bookmark-outline"></nb-icon> </div>
+          <div class="col d-flex p-1"> <nb-icon icon="more-horizontal-outline"></nb-icon> </div>
         </div>
-        <div class="col"> Social Media Sharing Icons </div>
+      </div>
     </div>
     <div class="row"> <img [src]="post.image" /> </div>
     <div class="row"> {{post.content}} </div>

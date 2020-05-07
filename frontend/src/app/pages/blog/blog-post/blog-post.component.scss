@@ -1,7 +1,15 @@
 @import '../../../../themes.scss';
 
 @include nb-install-component() {
-    .row {
-        margin-bottom: 2rem;
-    }
+  .row {
+      margin-bottom: 2rem;
+  }
+
+  .blog-info, .blog-content {
+    width: 60%!important;
+  }
+
+  .icon-size {
+    font-size: 1.5rem;
+  }
 }

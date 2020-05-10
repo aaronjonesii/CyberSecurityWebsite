@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="blog-info mx-auto">
       <h1 class=""> {{ post.title}} </h1>
       <div class="row"> <span class="lead"> {{ post.subtitle }} </span> </div>
@@ -19,10 +19,10 @@
         </div>
       </div>
     </div>
-    <div class="row w-100"> <img class="img-fluid mx-auto" [src]="post.image" /> </div>
-    <div class="blog-content mx-auto row">
+    <div class="row w-100 m-0"> <img class="img-fluid mx-auto" [src]="post.image" /> </div>
+    <div class="mt-5 blog-content mx-auto row">
 
-      <div class="row"> {{post.content}} </div>
+      <div class="row w-100 blog-post-content"> {{post.content}} </div>
       <div class="row w-100">
         <div class="d-inline-flex pr-3 m-1 p1 h5 text-muted" style="height: 42px; line-height: 38px; background-color: rgba(0, 0, 0, 0.05); border-radius: 99em;">
             <div class="d-flex align-self-center mx-1 p-1 rounded-circle bg-dark text-white" style="height: fit-content; box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.2);"> <nb-icon icon="hash-outline"></nb-icon> </div>

@@ -6,10 +6,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { PostsHeroComponent } from './posts-hero/posts-hero.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
+import { EditBlogPostComponent } from './edit-blog-post/edit-blog-post.component';
 
 const routes: Routes = [
   { path: '', component: BlogComponent, pathMatch: 'full' },
-  { path: 'post/:id', component: BlogPostComponent }
+  { path: 'post/:id', component: BlogPostComponent },
+  { path: 'post/:id/edit', component: EditBlogPostComponent}
 ];
 
 @NgModule({

@@ -13,6 +13,7 @@ import { HomeModule } from './pages/home/home.module';
 import { ProfileModule } from './pages/profile/profile.module';
 import { BlogModule } from './pages/blog/blog.module';
 import {BlogComponent} from './pages/blog/blog.component';
+import { EditBlogPostComponent } from './pages/blog/edit-blog-post/edit-blog-post.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {BlogComponent} from './pages/blog/blog.component';
     ProfileComponent,
     BlogPostComponent,
     BlogComponent,
+    EditBlogPostComponent,
   ],
   imports: [
     AppRoutingModule,

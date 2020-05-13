@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../../shared/utils/blog/blog.service';
 import { Location } from '@angular/common';
 import { Blog } from '../../../shared/utils/blog/blog';
+import * as BalloonEditor from '@ckeditor/ckeditor5-build-balloon-block';
 
 @Component({
   selector: 'anon-edit-blog-post',
@@ -11,8 +12,12 @@ import { Blog } from '../../../shared/utils/blog/blog';
 })
 export class EditBlogPostComponent implements OnInit {
   @Input() post: Blog;
+  public Editor = BalloonEditor;
+  editorConfig = {
+    toolbar: [ 'heading', '|','bold', 'italic' ]
+  };
 
-  constructor(
+    constructor(
     private route: ActivatedRoute,
     private blogService: BlogService,
     private location: Location,

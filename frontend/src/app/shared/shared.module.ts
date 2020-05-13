@@ -1,9 +1,27 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NbLayoutModule, CORPORATE_THEME, COSMIC_THEME, DEFAULT_THEME, NbThemeModule,
-  NbSidebarModule, NbMenuModule, NbDialogModule, NbWindowModule, NbToastrModule,
-  DARK_THEME, NbButtonModule, NbSelectModule, NbIconModule, NbCardModule, NbUserModule, NbContextMenuModule } from '@nebular/theme';
+import {
+  NbLayoutModule,
+  CORPORATE_THEME,
+  COSMIC_THEME,
+  DEFAULT_THEME,
+  NbThemeModule,
+  NbSidebarModule,
+  NbMenuModule,
+  NbDialogModule,
+  NbWindowModule,
+  NbToastrModule,
+  DARK_THEME,
+  NbButtonModule,
+  NbSelectModule,
+  NbIconModule,
+  NbCardModule,
+  NbUserModule,
+  NbContextMenuModule,
+  NbInputModule,
+  NbFormFieldModule
+} from '@nebular/theme';
 import { HeaderComponent } from './layout/header/header.component';
 import { RouterModule } from '@angular/router';
 import { HighlightModule } from 'ngx-highlightjs';
@@ -11,11 +29,13 @@ import { PostsHeroComponent } from '../pages/blog/posts-hero/posts-hero.componen
 import { ProfileComponent } from '../pages/profile/profile.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { BlogPostComponent } from '../pages/blog/blog-post/blog-post.component';
+import { FormsModule } from '@angular/forms';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
-const BASE_MODULES = [ CommonModule, HttpClientModule, RouterModule, HighlightModule, ];
+const BASE_MODULES = [ CommonModule, HttpClientModule, RouterModule, HighlightModule, CKEditorModule, ];
 const NB_MODULES = [
   NbLayoutModule, NbButtonModule, NbCardModule, NbSelectModule, NbIconModule,
-  NbUserModule, NbContextMenuModule,
+  NbUserModule, NbContextMenuModule, NbInputModule, FormsModule, NbFormFieldModule,
 ];
 const MAT_MODULES = [];
 const COMPONENTS = [];
